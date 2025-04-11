@@ -37,7 +37,7 @@ app.get("/",(req,res)=>{
   res.status(200).json({message:"Welcome E-Shop"})
 })
 app.get("*",(req,res)=>{
-  res.status(404).json({status:"failed",message:"Not found"})
+  res.status(404).json({status:"failed",message:"Route Not found"})
 })
 
 module.exports = app
