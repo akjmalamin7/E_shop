@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 const userProfileSchema = new Schema(
   {
-    userID:{type:mongoose.Schema.Types.ObjectId, required:true},
+    user_id:{type:mongoose.Schema.Types.ObjectId, required:true},
     cus_add:{type:String},
     cus_city:{type:String},
     cus_country:{type:String},

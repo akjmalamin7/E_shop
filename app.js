@@ -9,6 +9,7 @@ const helmet = require("helmet")
 const mongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const cors = require("cors");
+const router = require("./src/routes/api")
 /* cors */
 const corsOptions = {
   origin: process.env.CORS_ALLOW_ORIGIN || "http://localhost:5173",
@@ -30,8 +31,8 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 const limiter = rateLimit({ windowMs: 15 * 60 * 100, max: 3000 });
 app.use(limiter);
 
-
-
+app.use("/api/v1/uploads", express.static(path.join(__dirname, "uploads")));
+app.use("/api/v1",router)
 /* router */
 app.get("/",(req,res)=>{
   res.status(200).json({message:"Welcome E-Shop"})
