@@ -11,7 +11,7 @@ const { uploadRouter } = require("./upload/uploadRouter.js");
 router.post("/brand/create",createBrand)
 router.get("/brand/list",brandList)
 
-/* category */zl
+/* category */
 router.post("/category/create",createCategory)
 router.get("/category/list",categoryList)
 
