@@ -1,3 +1,5 @@
+const productModel = require("../../models/product/productModel.js");
+const { createService } = require("../../services/create/CreateService.js");
 const {
   productsService,
   productDetailsService,
@@ -8,7 +10,9 @@ const {
   productListBySimilarService,
   productReviewListService,
 } = require("../../services/products/productService.js");
-
+exports.createProduct = async(req,res)=>{
+  await createService(req,res,productModel);
+}
 exports.productListByBrand = async (req, res) => {};
 exports.productListByCategory = async (req, res) => {};
 exports.productListBySimilar = async (req, res) => {};

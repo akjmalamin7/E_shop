@@ -39,7 +39,7 @@ exports.deleteFile = (req, res) => {
   });
 };
 
-exports.getImages = (req, res) => {
+exports.getAllImages = (req, res) => {
   const dirPath = path.join(__dirname, "../../../uploads");
 
   fs.readdir(dirPath, (err, files) => {
@@ -58,3 +58,5 @@ exports.getImages = (req, res) => {
     res.json(images);
   });
 };
+
+
