@@ -3,7 +3,7 @@ const { createBrand, brandList } = require("../controllers/brand/brandController
 const { createCategory, categoryList } = require("../controllers/category/categoryController.js");
 const { productListByBrand, productListBySimilar, productListByKeyword, productListByRemark, productListByCategory, productDetails, productReviewList } = require("../controllers/product/productController.js");
 const { sliderList, createSlider } = require("../controllers/slider/slider.js");
-const { deleteFile } = require("../controllers/upload/uploader.js");
+const { deleteFile, getImages } = require("../controllers/upload/uploader.js");
 const { uploadRouter } = require("./upload/uploadRouter.js");
 
 
@@ -32,6 +32,7 @@ router.get("/slider/create",createSlider)
 
 /* file routes */
 router.post("/upload", uploadRouter);
+router.get('/images/all', getImages);
 router.delete("/delete/:filename", deleteFile);
 
 module.exports = router;
