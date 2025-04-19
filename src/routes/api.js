@@ -19,7 +19,7 @@ router.get("/category/list",categoryList)
 router.post("/products/add", createProduct);
 router.get("/product/list", productListByBrand);
 router.get("/products/by-brand/:brand_id", productListByBrand);
-router.get("/products/by-category/:categoryID", productListByCategory);
+router.get("/products/by-category/:category_id", productListByCategory);
 router.get("/products/by-similar/:keyword", productListBySimilar);
 router.get("/products/by-keyword/:keyword", productListByKeyword);
 router.get("/products/by-remark/:remark", productListByRemark);
