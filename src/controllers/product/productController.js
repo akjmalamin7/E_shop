@@ -13,7 +13,9 @@ const {
 exports.createProduct = async(req,res)=>{
   await createService(req,res,productModel);
 }
-exports.productListByBrand = async (req, res) => {};
+exports.productListByBrand = async (req, res) => {
+  await productListByBrandService(req, res)
+};
 exports.productListByCategory = async (req, res) => {};
 exports.productListBySimilar = async (req, res) => {};
 exports.productListByKeyword = async (req, res) => {};
