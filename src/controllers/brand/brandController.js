@@ -1,5 +1,5 @@
 const brandModel = require("../../models/brand/brandModel")
-const { brandListService, createBrandService } = require("../../services/brand/brandService")
+const { brandListService } = require("../../services/brand/brandService")
 const { createService } = require("../../services/create/CreateService")
 
 exports.createBrand = async(req,res)=>{
