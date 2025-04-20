@@ -4,6 +4,7 @@ const { createCategory, categoryList } = require("../controllers/category/catego
 const { productListByBrand, productListBySimilar, productListByKeyword, productListByRemark, productListByCategory, productDetails, productReviewList, createProduct } = require("../controllers/product/productController.js");
 const { sliderList, createSlider } = require("../controllers/slider/slider.js");
 const { deleteFile, getAllImages, viewImage, viewImageById } = require("../controllers/upload/uploader.js");
+const { createProductDetails } = require("../services/products/productService.js");
 const { uploadRouter } = require("./upload/uploadRouter.js");
 
 
@@ -17,14 +18,15 @@ router.get("/category/list",categoryList)
 
 /* product */
 router.post("/products/add", createProduct);
+router.post("/products/details/create", createProductDetails);
+router.get("/products/details/:product_id",productDetails);
 router.get("/product/list", productListByBrand);
 router.get("/products/by-brand/:brand_id", productListByBrand);
 router.get("/products/by-category/:category_id", productListByCategory);
-router.get("/products/by-similar/:keyword", productListBySimilar);
+router.get("/products/by-similar/:category_id", productListBySimilar);
 router.get("/products/by-keyword/:keyword", productListByKeyword);
 router.get("/products/by-remark/:remark", productListByRemark);
-router.get("/products/details/:productID",productDetails);
-router.get("products/review-list/:productID",productReviewList);
+router.get("products/review-list/:product_id",productReviewList);
 
 /* slider */
 router.get("/slider/list",sliderList)
