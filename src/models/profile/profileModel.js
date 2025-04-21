@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 const userProfileSchema = new Schema(
   {
-    user_id:{type:mongoose.Schema.Types.ObjectId, required:true},
+    user_id:{type:Schema.Types.ObjectId, required:true},
     cus_add:{type:String},
     cus_city:{type:String},
     cus_country:{type:String},
@@ -11,6 +11,7 @@ const userProfileSchema = new Schema(
     cus_postcode:{type:String},
     cus_state:{type:String},
     ship_add:{type:String},
+    ship_city:{type:String},
     ship_country:{type:String},
     ship_name:{type:String},
     ship_phone:{type:String},

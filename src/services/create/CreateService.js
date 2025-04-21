@@ -6,6 +6,6 @@ exports.createService = async (req, res,dataModel, message) => {
     return res.status(201).json({status:"success",message:"Created successfully!",data:data})
 
   } catch (err) {
-    return res.status(400).json({ status: "fail", data: error.toString() });
+    return res.status(400).json({ status: "fail", message:err.message });
   }
 };

@@ -2,12 +2,12 @@ const productModel = require("../../models/product/productModel.js");
 const { createService } = require("../../services/create/CreateService.js");
 const { productListByBrandService } = require("../../services/products/productsByBrand.js");
 const { productListByCategories } = require("../../services/products/productsByCategory.js");
+const { productListByKeywords } = require("../../services/products/productsByKeyword.js");
 const { productListByRemark } = require("../../services/products/productsByRemark.js");
 const { productListBySimilar } = require("../../services/products/productsBySimilar.js");
 const {
   productsService,
   productDetailsService,
-  productListByKeywordService,
   productReviewListService,
 } = require("../../services/products/productService.js");
 exports.createProduct = async(req,res)=>{
@@ -28,6 +28,8 @@ exports.productListBySimilar = async (req, res) => {
 exports.productDetails = async (req, res) => {
   await productDetailsService(req,res)
 };
-exports.productListByKeyword = async (req, res) => {};
+exports.productListByKeyword = async (req, res) => {
+  await productListByKeywords(req,res, productModel)
+};
 exports.productReviewList = async (req, res) => {};
 exports.createProductReview = async (req, res) => {};

@@ -2,8 +2,11 @@ const router = require("express").Router();
 const { createBrand, brandList } = require("../controllers/brand/brandController.js");
 const { createCategory, categoryList } = require("../controllers/category/categoryController.js");
 const { productListByBrand, productListBySimilar, productListByKeyword, productListByRemark, productListByCategory, productDetails, productReviewList, createProduct } = require("../controllers/product/productController.js");
+const { profileController } = require("../controllers/profile/profileController.js");
+const { reviewController, reviewListController } = require("../controllers/reviews/reviewController.js");
 const { sliderList, createSlider } = require("../controllers/slider/slider.js");
 const { deleteFile, getAllImages, viewImage, viewImageById } = require("../controllers/upload/uploader.js");
+const { userController } = require("../controllers/user/userController.js");
 const { createProductDetails } = require("../services/products/productService.js");
 const { uploadRouter } = require("./upload/uploadRouter.js");
 
@@ -29,13 +32,22 @@ router.get("/products/by-remark/:remark", productListByRemark);
 router.get("products/review-list/:product_id",productReviewList);
 
 /* slider */
+router.post("/slider/create",createSlider)
 router.get("/slider/list",sliderList)
-router.get("/slider/create",createSlider)
 
 
 /* file routes */
 router.post("/upload", uploadRouter);
 router.get('/images', getAllImages);
 router.delete("/delete/:filename", deleteFile);
+
+/* users */
+router.post("/user/create",userController)
+/* profile */
+router.post("/profile/create",profileController)
+/* review */
+router.post("/review/create",reviewController)
+router.get("/review/list/:product_id",reviewListController)
+
 
 module.exports = router;
