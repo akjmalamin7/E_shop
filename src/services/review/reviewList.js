@@ -39,7 +39,7 @@ exports.reviewListService = async (req, res, dataModel) => {
     ]);
     return res.status(200).json({
       status: "success",
-      message: "Successfully created",
+      message: "Successfully retrieve",
       data: data,
     });
   } catch (err) {
