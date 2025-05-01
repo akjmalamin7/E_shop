@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const nodemailer = require("nodemailer");
 dotenv.config({ path: path.resolve(__dirname, "../../.env") });
 
-const emailSender = async (emailTo, emailText, emailSubject) => {
+const emailSender = async ({emailTo, emailText, emailSubject}) => {
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -29,3 +29,4 @@ const emailSender = async (emailTo, emailText, emailSubject) => {
     }
   });
 };
+module.exports = {emailSender}

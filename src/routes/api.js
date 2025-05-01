@@ -2,14 +2,13 @@ const router = require("express").Router();
 const { createBrand, brandList } = require("../controllers/brand/brandController.js");
 const { createCategory, categoryList } = require("../controllers/category/categoryController.js");
 const { productListByBrand, productListBySimilar, productListByKeyword, productListByRemark, productListByCategory, productDetails, productReviewList, createProduct } = require("../controllers/product/productController.js");
-const { profileController } = require("../controllers/profile/profileController.js");
 const { reviewController, reviewListController } = require("../controllers/reviews/reviewController.js");
 const { sliderList, createSlider } = require("../controllers/slider/slider.js");
 const { deleteFile, getAllImages, viewImage, viewImageById } = require("../controllers/upload/uploader.js");
-const { userController } = require("../controllers/user/userController.js");
+const { userController, createUserController, userOtpController, userVerifyOtpController, userLogoutController, userCreateProfileController, updateUserProfileController, userReadProfileController } = require("../controllers/user/userController.js");
 const { createProductDetails } = require("../services/products/productService.js");
 const { uploadRouter } = require("./upload/uploadRouter.js");
-
+const authMiddleware = require("../middlewares/authorize/authorize.js")
 
 /* brand */
 router.post("/brand/create",createBrand)
@@ -41,10 +40,18 @@ router.post("/upload", uploadRouter);
 router.get('/images', getAllImages);
 router.delete("/delete/:filename", deleteFile);
 
-/* users */
-router.post("/user/create",userController)
+/* ========================= start users routes ========================= */
+router.post("/user/create",createUserController)
+router.post("/user-otp",userOtpController)
+router.post("/verify-otp",userVerifyOtpController)
+router.post("/logout",authMiddleware,userLogoutController)
 /* profile */
-router.post("/profile/create",profileController)
+router.post("/profile/create",authMiddleware,userCreateProfileController)
+router.put("/profile/update", authMiddleware, updateUserProfileController);
+router.get("/profile", authMiddleware, userReadProfileController);
+
+/* =========================end users routes ========================= */
+
 /* review */
 router.post("/review/create",reviewController)
 router.get("/review/list/:product_id",reviewListController)

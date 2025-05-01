@@ -1,6 +1,7 @@
 const { Schema, model } = require("mongoose");
 const userProfileSchema = new Schema(
   {
+    image:{type:String},
     user_id:{type:Schema.Types.ObjectId, required:true},
     cus_add:{type:String},
     cus_city:{type:String},

@@ -3,6 +3,8 @@ const app = new express();
 const path = require("path");
 const bodyParser = require("body-parser");
 const hpp = require("hpp");
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
 /* security middleware */
 const rateLimit = require("express-rate-limit");
 const helmet = require("helmet")
