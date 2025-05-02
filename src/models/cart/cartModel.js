@@ -4,12 +4,11 @@ const cartSchema = new Schema(
     product_id:{type:Schema.Types.ObjectId, required:true},
     user_id:{type:Schema.Types.ObjectId, required:true},
     color:{type:String, required:true},
-    price:{type:String,required:true},
     qty:{type:String, color:true},
     size:{type:String, color:true},
   },
   { timestamps: true, versionKey: false }
 );
 
-const cardModel = model("cart", cartSchema);
-module.exports = cardModel;
+const cartModel = model("cart", cartSchema);
+module.exports = cartModel;
