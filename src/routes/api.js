@@ -33,7 +33,7 @@ const { createProductDetails } = require("../services/products/productService.js
 const { uploadRouter } = require("./upload/uploadRouter.js");
 const authMiddleware = require("../middlewares/authorize/authorize.js");
 const { createWishController, updateWishController, deleteWishController, getWishlistController } = require("../controllers/wishlist/wishListController.js");
-const { createCartController } = require("../controllers/cart/cartListController.js");
+const { createCartController, removeCartController } = require("../controllers/cart/cartListController.js");
 
 /* ========================= start Brand routes ========================= */
 router.post("/brand/create", createBrand);
@@ -97,7 +97,8 @@ router.get("/review/list/:product_id", reviewListController);
 /* ========================= start review routes ========================= */
 
 /* ========================= start cart routes ========================= */
-router.post("/cart/add",createCartController)
+router.post("/cart/add",authMiddleware,createCartController)
+router.delete("/cart/remove",authMiddleware,removeCartController)
 /* ========================= start cart routes ========================= */
 
 module.exports = router;
