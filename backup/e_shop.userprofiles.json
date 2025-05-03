@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "68134c0e6f9b38036aa1d456"
+  },
+  "image": "",
+  "user_id": {
+    "$oid": "68126905518bfec9db20b302"
+  },
+  "cus_add": "Dhaka",
+  "cus_city": "Dhaka",
+  "cus_country": "Bangladesh",
+  "cus_fax": "01780742255",
+  "cus_name": "Muhammad Al Amin",
+  "cus_phone": "01780742255",
+  "cus_postcode": "5020",
+  "cus_state": "Dhaka",
+  "ship_add": "Dhaka",
+  "ship_city": "Dhaka",
+  "ship_country": "Bangladesh",
+  "ship_name": "Akjm Al Amin",
+  "ship_phone": "01780742255",
+  "ship_postcode": "5020",
+  "ship_state": "Dhaka",
+  "createdAt": {
+    "$date": "2025-05-01T10:25:18.153Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T10:32:54.822Z"
+  }
+}]

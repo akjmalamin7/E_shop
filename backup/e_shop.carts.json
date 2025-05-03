@@ -1,0 +1,60 @@
+[{
+  "_id": {
+    "$oid": "681461c81d5949ba5ad996a2"
+  },
+  "product_id": {
+    "$oid": "6813befc2543abb9ebe23293"
+  },
+  "user_id": {
+    "$oid": "68126905518bfec9db20b302"
+  },
+  "color": "Maroon",
+  "qty": "3",
+  "size": "M",
+  "createdAt": {
+    "$date": "2025-05-02T06:10:16.213Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-02T06:54:20.686Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681461ce1d5949ba5ad996a5"
+  },
+  "product_id": {
+    "$oid": "6813beff2543abb9ebe23295"
+  },
+  "user_id": {
+    "$oid": "68126905518bfec9db20b302"
+  },
+  "color": "White",
+  "qty": "1",
+  "size": "M",
+  "createdAt": {
+    "$date": "2025-05-02T06:10:22.793Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-02T06:10:22.793Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681461d61d5949ba5ad996a8"
+  },
+  "product_id": {
+    "$oid": "6813bf002543abb9ebe23297"
+  },
+  "user_id": {
+    "$oid": "68126905518bfec9db20b302"
+  },
+  "color": "White",
+  "qty": "1",
+  "size": "M",
+  "createdAt": {
+    "$date": "2025-05-02T06:10:30.659Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-02T06:10:30.659Z"
+  }
+}]

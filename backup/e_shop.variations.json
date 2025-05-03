@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "6815adc84a0b1449b188a316"
+  },
+  "product_id": {
+    "$oid": "68125d720be475b09a2e6df6"
+  },
+  "size": "L",
+  "color": "Red",
+  "stock": 5,
+  "price": 999,
+  "createdAt": {
+    "$date": "2025-05-03T05:46:48.660Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T05:49:56.743Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6815adfb4a0b1449b188a318"
+  },
+  "product_id": {
+    "$oid": "68125d720be475b09a2e6df6"
+  },
+  "size": "L",
+  "color": "Black",
+  "stock": 20,
+  "price": 999,
+  "createdAt": {
+    "$date": "2025-05-03T05:47:39.900Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T05:47:39.900Z"
+  }
+}]

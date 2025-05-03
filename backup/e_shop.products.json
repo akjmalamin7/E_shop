@@ -1,0 +1,104 @@
+[{
+  "_id": {
+    "$oid": "68125d720be475b09a2e6df6"
+  },
+  "title": "Mens Deep Green Blazer",
+  "short_des": "Add a touch of casual elegance with this men's blazer. Made from a cotton blend, this unlined, unpadded blazer features relaxed lapels for a less formal, more comfortable fit. The slim fit design is lightweight, making it perfect for layering over various outfits for both style and ease.",
+  "price": "5,107",
+  "discount": true,
+  "discount_price": "500",
+  "image": "file_1744817802551_236255416.jpg",
+  "star": "5.0",
+  "stock": true,
+  "remark": "Wash dark colors separately. Do not bleach. Wash mild detergent",
+  "category_id": {
+    "$oid": "68125d250be475b09a2e6df0"
+  },
+  "brand_id": {
+    "$oid": "68125d2f0be475b09a2e6df2"
+  },
+  "createdAt": {
+    "$date": "2025-04-30T17:27:14.696Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T17:27:14.696Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6813befc2543abb9ebe23293"
+  },
+  "title": "Mens Deep Green Blazer",
+  "short_des": "Add a touch of casual elegance with this men's blazer. Made from a cotton blend, this unlined, unpadded blazer features relaxed lapels for a less formal, more comfortable fit. The slim fit design is lightweight, making it perfect for layering over various outfits for both style and ease.",
+  "price": "5,107",
+  "discount": true,
+  "discount_price": "500",
+  "image": "file_1744817802551_236255416.jpg",
+  "star": "5.0",
+  "stock": true,
+  "remark": "Wash dark colors separately. Do not bleach. Wash mild detergent",
+  "category_id": {
+    "$oid": "68125d250be475b09a2e6df0"
+  },
+  "brand_id": {
+    "$oid": "68125d2f0be475b09a2e6df2"
+  },
+  "createdAt": {
+    "$date": "2025-05-01T18:35:40.664Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T18:35:40.664Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6813beff2543abb9ebe23295"
+  },
+  "title": "Mens Deep Green Blazer",
+  "short_des": "Add a touch of casual elegance with this men's blazer. Made from a cotton blend, this unlined, unpadded blazer features relaxed lapels for a less formal, more comfortable fit. The slim fit design is lightweight, making it perfect for layering over various outfits for both style and ease.",
+  "price": "5,107",
+  "discount": true,
+  "discount_price": "500",
+  "image": "file_1744817802551_236255416.jpg",
+  "star": "5.0",
+  "stock": true,
+  "remark": "Wash dark colors separately. Do not bleach. Wash mild detergent",
+  "category_id": {
+    "$oid": "68125d250be475b09a2e6df0"
+  },
+  "brand_id": {
+    "$oid": "68125d2f0be475b09a2e6df2"
+  },
+  "createdAt": {
+    "$date": "2025-05-01T18:35:43.157Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T18:35:43.157Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6813bf002543abb9ebe23297"
+  },
+  "title": "Mens Deep Green Blazer",
+  "short_des": "Add a touch of casual elegance with this men's blazer. Made from a cotton blend, this unlined, unpadded blazer features relaxed lapels for a less formal, more comfortable fit. The slim fit design is lightweight, making it perfect for layering over various outfits for both style and ease.",
+  "price": "5,107",
+  "discount": true,
+  "discount_price": "500",
+  "image": "file_1744817802551_236255416.jpg",
+  "star": "5.0",
+  "stock": true,
+  "remark": "Wash dark colors separately. Do not bleach. Wash mild detergent",
+  "category_id": {
+    "$oid": "68125d250be475b09a2e6df0"
+  },
+  "brand_id": {
+    "$oid": "68125d2f0be475b09a2e6df2"
+  },
+  "createdAt": {
+    "$date": "2025-05-01T18:35:44.626Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T18:35:44.626Z"
+  }
+}]

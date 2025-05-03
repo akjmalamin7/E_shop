@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "68126905518bfec9db20b302"
+  },
+  "email": "akjmalamin.dev@gmail.com",
+  "createdAt": {
+    "$date": "2025-04-30T18:16:37.714Z"
+  },
+  "otp": "0",
+  "updatedAt": {
+    "$date": "2025-05-03T05:06:49.738Z"
+  }
+}]
