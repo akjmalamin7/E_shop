@@ -4,7 +4,7 @@ exports.productListByRemark = async (req, res, dataModel) => {
     const remark_from_url = req.params.remark;
 
     const match_remark = {
-      $match: { remark: remark_from_url },
+      $match: { remark: { $regex: remark_from_url, $options: "i" } },
     };
 
     let join_with_brands = {

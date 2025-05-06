@@ -20,7 +20,12 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 /* security */
-app.use(helmet());
+app.use(
+  helmet({
+    crossOriginResourcePolicy: false, // অথবা { policy: "cross-origin" }
+  })
+);
+
 app.use(mongoSanitize());
 app.use(xss());
 app.use(hpp());
@@ -35,12 +40,13 @@ app.use(limiter);
 
 app.use("/api/v1/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/v1",router)
+app.use(express.static("../../frontend/eshop/dist"))
 /* router */
 app.get("/",(req,res)=>{
   res.status(200).json({message:"Welcome E-Shop"})
 })
 app.get("*",(req,res)=>{
-  res.status(404).json({status:"failed",message:"Route Not found"})
+  res.sendFile(path.resolve(__dirname,'../../frontend/eshop','dist','index.html'))
 })
 
 module.exports = app

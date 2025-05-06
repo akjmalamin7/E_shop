@@ -98,7 +98,7 @@ const productDetailsService = async (req, res) => {
         },
         details: {
           $cond: [
-            { $gt: [ { $size: "$details" }, 0 ] },
+            { $gt: [{ $size: "$details" }, 0] },
             {
               $let: {
                 vars: { d: { $arrayElemAt: ["$details", 0] } },
@@ -106,13 +106,13 @@ const productDetailsService = async (req, res) => {
                   images: "$$d.images",
                   des: "$$d.des",
                   color: "$$d.color",
-                  size: "$$d.size"
-                }
-              }
+                  size: "$$d.size",
+                },
+              },
             },
-            {} // if no details found
-          ]
-        }
+            {}, // if no details found
+          ],
+        },
       },
     };
 
@@ -135,18 +135,27 @@ const productDetailsService = async (req, res) => {
     });
   }
 };
-const productListService = async (req, res) => {};
 
 
-const productListByKeywordService = async (req, res) => {};
-const productListBySimilarService = async (req, res) => {};
-const productReviewListService = async (req, res) => {};
+const productListService = async (req, res) => {
+  try {
+    const products = await productModel.find({});
+    return res.status(200).json({
+      status:"success",
+      message:"Successfully retrieve",
+      data:products
+    })
+  } catch (err) {
+    return rest.status(500).json({
+      status: "fail",
+      message: "Product not found",
+      error: err.message,
+    });
+  }
+};
 
 module.exports = {
   createProductDetails,
   productListService,
   productDetailsService,
-  productListByKeywordService,
-  productListBySimilarService,
-  productReviewListService,
 };

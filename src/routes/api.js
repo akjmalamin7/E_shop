@@ -26,7 +26,7 @@ const {
   updateUserProfileController,
   userReadProfileController,
 } = require("../controllers/user/userController.js");
-const { createProductDetails } = require("../services/products/productService.js");
+const { createProductDetails, productListService } = require("../services/products/productService.js");
 const { uploadRouter } = require("./upload/uploadRouter.js");
 const authMiddleware = require("../middlewares/authorize/authorize.js");
 const {
@@ -67,7 +67,7 @@ start Product routes
 router.post("/products/add", createProduct);
 router.post("/products/details/create", createProductDetails);
 router.get("/products/details/:product_id", productDetails);
-router.get("/product/list", productListByBrand);
+router.get("/products/list", productListService);
 router.get("/products/by-brand/:brand_id", productListByBrand);
 router.get("/products/by-category/:category_id", productListByCategory);
 router.get("/products/by-similar/:category_id", productListBySimilar);
